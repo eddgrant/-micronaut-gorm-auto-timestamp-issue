@@ -1,0 +1,22 @@
+---
+micronaut:
+    application:
+        name: micronaut-gorm-auto-timestamp-issue
+
+---
+hibernate:
+    hbm2ddl:
+        auto: update
+    cache:
+        queries: false
+        use_second_level_cache: true
+        use_query_cache: false
+        region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+dataSources:
+    default:
+        url: jdbc:h2:mem:default;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        pooled: true
+        jmxExport: true
+        driverClassName: org.h2.Driver
+        username: sa
+        password: ''

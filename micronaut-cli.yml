@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: com.eddgrant
+---
+testFramework: spock
+sourceLanguage: groovy
